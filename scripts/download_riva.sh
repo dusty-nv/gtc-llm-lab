@@ -17,8 +17,12 @@ download_file()
 download_riva()
 {
 	cd $RIVA
-	download_file "https://nvidia.box.com/shared/static/wlvrj3hn54qdbnve5o9xqzxw7hy6aypl.zip" "riva_embedded_quickstart_v2.14_rmir.zip"
-	unzip "riva_embedded_quickstart_v2.14_rmir.zip"
+	
+	#download_file "https://nvidia.box.com/shared/static/wlvrj3hn54qdbnve5o9xqzxw7hy6aypl.zip" "riva_embedded_quickstart_v2.14_rmir.zip"
+	#unzip "riva_embedded_quickstart_v2.14_rmir.zip"
+	
+	download_file "https://nvidia.box.com/shared/static/ae7roctj7alud8bxmz3zbovuylmy3xnm.zip" "riva_embedded_quickstart_jp6-ea_asr.zip"
+	unzip "riva_embedded_quickstart_jp6-ea_asr.zip"
 	
 	mkdir -p $RMIR
 	cd $RMIR
@@ -27,7 +31,7 @@ download_riva()
 	download_file "https://nvidia.box.com/shared/static/9rfi80ridavw1edfnhqocxk05y7llvm2.rmir" "asr-conformer-en-US-offline-flashlight-.rmir"
 	download_file "https://nvidia.box.com/shared/static/5qz24s3wvmr4uajxpjt8y4su2yzbbrsn.rmir" "asr-conformer-en-US-streaming-throughput-flashlight-.rmir"
 	download_file "https://nvidia.box.com/shared/static/vw6b30rym3xarm45tx08vyg7xw780ked.rmir" "asr-punctuation-en-US.rmir"
-	download_file "https://nvidia.box.com/shared/static/qv115xr3bo4mxtu275ep2932rcu6fxmx.rmir" "tts-FastPitch_44k_EnglishUS_IPA.rmir"
+	#download_file "https://nvidia.box.com/shared/static/qv115xr3bo4mxtu275ep2932rcu6fxmx.rmir" "tts-FastPitch_44k_EnglishUS_IPA.rmir"
 }
 
 download_riva
@@ -45,7 +49,10 @@ download_riva
 #
 # python3 examples/riva_streaming_asr_client.py --input-file wav/en-US_wordboosting_sample.wav --simulate-realtime --automatic-punctuation
 #
-# python3 examples/talk.py --stream --output /data/tts.wav --text 'Hello, how are you today?'
+# python3 examples/transcribe_mic.py --list-devices
+# python3 examples/transcribe_mic.py --automatic-punctuation --input-device 25
+#
+# python3 examples/talk.py --stream --output /data/tts.wav --text 'Hello, how are you today?' --sample-rate-hz 44100
 # 
 # if failed with "Error: Triton model failed during inference. Error message: Streaming timed out", try running it again
 #
