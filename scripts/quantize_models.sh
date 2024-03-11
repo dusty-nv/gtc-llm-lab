@@ -24,15 +24,16 @@ quantize_vlm()
 
 #quantize_llm "meta-llama/Llama-2-7b-chat-hf"
 #quantize_llm "meta-llama/Llama-2-13b-chat-hf"
+quantize_llm "meta-llama/Llama-2-70b-chat-hf"
 
 #quantize_llm "princeton-nlp/Sheared-LLaMA-2.7B-ShareGPT"
 #quantize_llm "stabilityai/stablelm-zephyr-3b"
 
-quantize_vlm "liuhaotian/llava-v1.6-vicuna-7b"
-quantize_vlm "liuhaotian/llava-v1.6-vicuna-13b"
+#quantize_vlm "liuhaotian/llava-v1.6-vicuna-7b"
+#quantize_vlm "liuhaotian/llava-v1.6-vicuna-13b"
 
-quantize_vlm "Efficient-Large-Model/VILA-2.7b"
-quantize_vlm "Efficient-Large-Model/VILA-7b"
-quantize_vlm "Efficient-Large-Model/VILA-13b"
+#quantize_vlm "Efficient-Large-Model/VILA-2.7b"
+#quantize_vlm "Efficient-Large-Model/VILA-7b"
+#quantize_vlm "Efficient-Large-Model/VILA-13b"
 
-quantize_vlm "NousResearch/Obsidian-3B-V0.5"
+#quantize_vlm "NousResearch/Obsidian-3B-V0.5"

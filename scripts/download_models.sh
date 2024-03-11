@@ -68,3 +68,9 @@ download "Efficient-Large-Model/VILA-13b"
 
 download "NousResearch/Obsidian-3B-V0.5"
 download "openai/clip-vit-large-patch14"
+
+download "coqui/XTTS-v2"
+
+./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/c5m9cpm0h5xp2o5338qrry5svao39uyu.trt -O hifigan_decoder_fp16.trt'
+./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/n3dqw0gnr5mj0lt0kqrqcuw5b1xj36cj.trt -O hifigan_decoder_fp32.trt'
+
