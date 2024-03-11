@@ -55,22 +55,22 @@ quantize()
 benchmark()
 {
 	./run.sh --workdir $MLC_MODEL_DIR $CONTAINER \
-		/bin/bash -c "python3 /opt/mlc-llm/benchmark.py --model $MLC_MODEL_DIR/$1/params --max-new-tokens $MAX_NEW_TOKENS --max-num-prompts $MAX_NUM_PROMPTS --prompt $3 --save /data/benchmarks/mlc.csv"
+		/bin/bash -c "python3 /opt/mlc-llm/benchmark.py --model $MLC_MODEL_DIR/$1/params --max-new-tokens $MAX_NEW_TOKENS --max-num-prompts $MAX_NUM_PROMPTS --prompt $2 --save /data/benchmarks/mlc.csv"
 }
 
 benchmark_shmoo()
 {
-	benchmark $1 $2 "/data/prompts/completion_16.json"
-	#benchmark $1 $2 "/data/prompts/completion_32.json"
-	#benchmark $1 $2 "/data/prompts/completion_64.json"
-	#benchmark $1 $2 "/data/prompts/completion_128.json"
-	#benchmark $1 $2 "/data/prompts/completion_256.json"
-	#benchmark $1 $2 "/data/prompts/completion_512.json"
-	#benchmark $1 $2 "/data/prompts/completion_1024.json"
-	#benchmark $1 $2 "/data/prompts/completion_2048.json"
-	#benchmark $1 $2 "/data/prompts/completion_3072.json"
-	##benchmark $1 $2 "/data/prompts/completion_3840.json"
-	#benchmark $1 $2 "/data/prompts/completion_3968.json"
+	benchmark $1 "/data/prompts/completion_16.json"
+	#benchmark $1 "/data/prompts/completion_32.json"
+	#benchmark $1 "/data/prompts/completion_64.json"
+	#benchmark $1 "/data/prompts/completion_128.json"
+	#benchmark $1 "/data/prompts/completion_256.json"
+	#benchmark $1 "/data/prompts/completion_512.json"
+	#benchmark $1 "/data/prompts/completion_1024.json"
+	#benchmark $1 "/data/prompts/completion_2048.json"
+	#benchmark $1 "/data/prompts/completion_3072.json"
+	##benchmark $1 "/data/prompts/completion_3840.json"
+	#benchmark $1 "/data/prompts/completion_3968.json"
 }
 	
 run_benchmark()
