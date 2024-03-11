@@ -53,6 +53,7 @@ download_riva
 # python3 examples/transcribe_mic.py --automatic-punctuation --input-device 25
 #
 # python3 examples/talk.py --stream --output /data/tts.wav --text 'Hello, how are you today?' --sample-rate-hz 44100
-# 
+# python3 examples/talk.py --stream --output /data/tts.wav --text 'Hello, how are you today?' --play-audio --output-device 25 --sample-rate-hz 44100
+#
 # if failed with "Error: Triton model failed during inference. Error message: Streaming timed out", try running it again
 #
