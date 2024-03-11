@@ -55,7 +55,7 @@ quantize()
 benchmark()
 {
 	./run.sh --workdir $MLC_MODEL_DIR $CONTAINER \
-		/bin/bash -c "python3 /opt/mlc-llm/benchmark.py --model $MLC_MODEL_DIR/$1/params --max-new-tokens $MAX_NEW_TOKENS --max-num-prompts $MAX_NUM_PROMPTS --prompt $3 --save /data/benchmarks/mlc_${MLC_VERSION}.csv"
+		/bin/bash -c "python3 /opt/mlc-llm/benchmark.py --model $MLC_MODEL_DIR/$1/params --max-new-tokens $MAX_NEW_TOKENS --max-num-prompts $MAX_NUM_PROMPTS --prompt $3 --save /data/benchmarks/mlc.csv"
 }
 
 benchmark_shmoo()
