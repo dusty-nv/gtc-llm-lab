@@ -48,7 +48,7 @@ quantize()
 	
 	if [[ $SKIP_QUANTIZATION = "no" ]]; then
 		./run.sh --workdir $MLC_MODEL_DIR $CONTAINER \
-			/bin/bash -c "python3 -m mlc_llm.build --model $1 --target cuda --use-cuda-graph --use-flash-attn-mqa --quantization $2 $QUANT_FLAGS --artifact-path $MLC_MODEL_DIR --max-seq-len $MAX_SEQ_LEN"
+			/bin/bash -c "python3 -m mlc_llm.build --model $1 --target cuda --use-cuda-graph --use-flash-attn-mqa --quantization $QUANTIZATION $QUANT_FLAGS --artifact-path $MLC_MODEL_DIR --max-seq-len $MAX_SEQ_LEN"
 	fi
 }
 
