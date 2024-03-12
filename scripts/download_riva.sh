@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-ROOT="$( dirname $( dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd ) ) )"
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 RIVA=${1:-"$HOME/riva"}
 RMIR="$RIVA/model_repository/rmir"
 
