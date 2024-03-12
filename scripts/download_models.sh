@@ -38,8 +38,8 @@ download_gguf "TheBloke/Llama-2-13b-Chat-GGUF" "llama-2-13b-chat.Q4_K_M.gguf"
 download_ooba "meta-llama/Llama-2-7b-hf" "--skip-safetensors"
 download_ooba "meta-llama/Llama-2-13b-hf" "--skip-safetensors"
 
-download_ooba "meta-llama/Llama-2-7b-chat-hf" "--skip-safetensors"
-download_ooba "meta-llama/Llama-2-13b-chat-hf" "--skip-safetensors"
+download_ooba "meta-llama/Llama-2-7b-chat-hf"
+download_ooba "meta-llama/Llama-2-13b-chat-hf"
 
 #rm_safetensors "meta-llama/Llama-2-7b-hf"
 #rm_safetensors "meta-llama/Llama-2-13b-hf"
@@ -49,6 +49,9 @@ download_ooba "meta-llama/Llama-2-13b-chat-hf" "--skip-safetensors"
 
 download_ooba "TheBloke/Llama-2-7B-Chat-GPTQ"
 download_ooba "TheBloke/Llama-2-7B-Chat-AWQ"
+
+download_ooba "TheBloke/Llama-2-13B-chat-GPTQ"
+download_ooba "TheBloke/Llama-2-13B-chat-AWQ"
 
 download_ooba "TheBloke/llava-v1.5-13B-GPTQ"
 
@@ -71,6 +74,6 @@ download "openai/clip-vit-large-patch14"
 
 download "coqui/XTTS-v2"
 
-./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/c5m9cpm0h5xp2o5338qrry5svao39uyu.trt -O hifigan_decoder_fp16.trt'
-./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/n3dqw0gnr5mj0lt0kqrqcuw5b1xj36cj.trt -O hifigan_decoder_fp32.trt'
+#./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/c5m9cpm0h5xp2o5338qrry5svao39uyu.trt -O hifigan_decoder_fp16.trt'
+#./run.sh $CONTAINER /bin/bash -c 'cd $(huggingface-downloader coqui/XTTS-v2); wget https://nvidia.box.com/shared/static/n3dqw0gnr5mj0lt0kqrqcuw5b1xj36cj.trt -O hifigan_decoder_fp32.trt'
 
