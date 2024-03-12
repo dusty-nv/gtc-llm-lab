@@ -8,4 +8,8 @@ echo "script dir:         $ROOT"
 echo "jetson-containers:  $CONTAINERS"
 
 echo ""
-echo "No updates needed"
+#echo "No updates needed"
+
+echo "updating jetson-containers @ $CONTAINERS"
+cd $CONTAINERS
+git pull
