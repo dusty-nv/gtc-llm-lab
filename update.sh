@@ -7,6 +7,7 @@ CONTAINERS="$HOME/jetson-containers"
 echo "script dir:         $ROOT"
 echo "jetson-containers:  $CONTAINERS"
 
+echo "updating gtc-llm-lab @ $ROOT"
 cd $ROOT
 git pull
 
